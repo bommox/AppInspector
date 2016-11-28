@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "minimum_chrome_version": "31.0",
-    "name": "App Inspector for Sencha™",
+    "name": "App Inspector for Sencha™ and ExtJS™",
     "description": "__MSG_appDescription__",
     "version": "2.0.4",
     "icons": {
