@@ -80,7 +80,7 @@ Ext.define('AI.controller.MVC', {
         debugger;
         AI.util.InspectedWindow.eval(
             AI.util.InspectedWindow.setComponentAsGlobalVar,
-            record.get('id'),            
+            record.get('id'),
             Ext.emptyFn
         );
     },
