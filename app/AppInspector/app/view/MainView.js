@@ -19,7 +19,6 @@ Ext.define('AI.view.MainView', {
 
     requires: [
         'AI.view.About',
-        'AI.view.Query',
         'AI.view.Components',
         'AI.view.stores.Stores',
         'AI.view.Layouts',
