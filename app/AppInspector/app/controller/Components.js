@@ -48,7 +48,8 @@ Ext.define('AI.controller.Components', {
                 'applyfilter': me.onFilterComponentTree
             },
             'componentstreegrid#ComponentTree': {
-                'itemclick': me.onSelectComponent
+                'itemclick': me.onSelectComponent,
+                'itemdblclick' : me.onDblClickComponent,
             },
             // properties
             'gridpanel#ComponentProps': {
@@ -66,6 +67,21 @@ Ext.define('AI.controller.Components', {
                 'applyfilter': me.onFilterComponentDetails
             }
         });
+    },
+
+    onDblClickComponent : function( tree, record, item, index, e, eOpts ) {
+        // Objetivo llevar este componente a la consola
+         AI.util.InspectedWindow.eval(
+            AI.util.InspectedWindow.highlight,
+            record.get('cmpId'),
+            Ext.emptyFn
+        );
+
+        AI.util.InspectedWindow.eval(
+            AI.util.InspectedWindow.setComponentAsGlobalVar,
+            record.get('cmpId'),            
+            Ext.emptyFn
+        );
     },
 
     onActivate: function(panel) {
